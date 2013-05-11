@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <?php echo $this->headLink()->prependStylesheet($this->baseUrl('/css/style.css')); ?>
+        <?php echo $this->headLink()->prependStylesheet($this->baseUrl('/css/bootstrap.min.css')); ?>
+
+        <script type="text/javascript" src="<?php echo $this->baseUrl('/js/jquery-1.7.2.min.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl('/js/bootstrap.min.js'); ?>"></script>
+    </head>
+    <body>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="mainwrapper">
+
+                    <div class="header">
+                        <h3>LF ELECTRONIX</h3>
+                        <div class="search-form">
+                            <form class="form-search pull-right search-box">
+                                <input type="text" class="input-medium search-query" placeholder="search here...">
+                                
+                            </form>
+                        </div>
+
+                        <div class="menu">
+
+                            <ul>
+
+                                <li><a href="">HOT DEALS</a><div class="borderRight"></div></li>
+                                <li><a href=''>MEMBERSHIP</a><div class="borderRight"></div></li>
+                                <li><a href="">FAQ</a><div class="borderRight"></div></li>
+                                <li><a href="">CONTACT</a></li>
+                            </ul>
+
+                            <div class="signin"><a href="">Sign in</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainContainer">
+                        <div class="accordion span2" id="accordion2"  >
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                        Computers & Laptops
+
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="accordion-body collapse ">
+                                    <div class="accordion-inner">
+                                        Hp<br/>
+                                        Dell<br/>
+                                        Sony<br/>
+                                        MacBook<br/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                        Mobile
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Samsung<br/>
+                                        Apple<br/>
+                                        Nokia<br/>
+                                        Sony Ericssion<br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php echo $this->layout()->content ?> 
+                    </div>
+
+                </div>
+            </div>
+            <footer>
+                <small>&COPY; lfelectronix.com</small>
+            </footer>
+        </div>
+
+    </body>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/js/jquery-1.5.1.js') ?>"></script>
+</html>
+

@@ -1,0 +1,84 @@
+
+
+<?php 
+    $authentication=  Zend_Auth::getInstance();
+    $name='';
+    $image_name='';
+    if($authentication->hasIdentity()){
+    $name=$authentication->getIdentity()->name;
+    $image_name=$authentication->getIdentity()->profile_pic;
+    //echo $image_name;die;
+    }
+?>
+
+
+<?php echo $this->doctype;?>
+<html>
+    <head>
+       
+        <?php echo $this->headTitle();
+              echo $this->headLink();
+              echo $this->headMeta();?>
+        <!--<meta http-equiv="Content-type" content ="text/html;charset=UTF-8">-->
+        <?php echo $this->headLink()->prependStylesheet($this->baseUrl('/css/style.css')); ?>
+        <?php echo $this->headLink()->prependStylesheet($this->baseUrl('/css/bootstrap.min.css')); ?>
+        <?php // echo $this->headLink()->prependStylesheet($this->baseUrl('/css/profile_editor_style.css')); ?>
+        <script type="text/javascript" src="<?php echo $this->baseUrl('/js/jquery-1.7.2.min.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl('/js/common.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl('/js/profile.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl('/js/json.js'); ?>"></script>
+        
+    </head>
+    <body>
+        <?php
+        $uri = $_SERVER['REQUEST_URI'];
+        $arr = explode('/', $uri);
+        
+            $action = (isset($arr[3]))? $arr[3]:'';
+        ?>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="mainwrapper">
+                    <?php
+                    if ($authentication->hasIdentity()) {
+                        ?> 
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Users</a></li>
+                            <li><a href="#">Messages</a></li>
+                            <li><a href="#">Something </a></li>
+                            <li><a href="<?php echo $this->url(array('action' => 'manage-resources', 'controller' => 'permission', 'module' => 'admin')); ?>">Check Changes</a></li>
+                            <li><a href="<?php echo $this->url(array('action' => 'assign-resources', 'controller' => 'permission', 'module' => 'admin')); ?>">Assign Permissions</a></li>
+                            <li style='float: right;'><a href="<?php echo $this->url(array('action' => 'logout', 'controller' => 'auth', 'module' => 'admin')); ?>">Logout</a></li>
+                            <li style="float: right"><a href="<?php echo $this->url(array('action' => 'display', 'controller' => 'index', 'module' => 'admin')); ?>"><img src="<?php echo BASE_URL; ?>image/uploads/<?php echo $image_name; ?>"><?php echo $name;?></a></li>
+                            
+                        </ul>
+                    <? } ?>
+                    
+                    <?php if ($action == 'login') { ?>
+                        <ul class="nav nav-tabs">
+                            
+                            <li style='float: right;'><a href="<?php echo $this->url(array('action' => 'register', 'controller' => 'auth', 'module' => 'admin')); ?>">Register</a></li>
+                        </ul>
+                    <?php } ?>
+                    
+                    <?php if ($action == 'register') { ?>
+                        <ul class="nav nav-tabs">
+                            <li style='float: right;'><a href="<?php echo $this->url(array('action' => 'login', 'controller' => 'auth', 'module' => 'admin')); ?>">login</a></li>
+                        </ul>
+                    <?php } ?>
+                </div>
+            </div>
+            <?php echo $this->flashMessenger();?>
+            <div class="mainContainer">
+                <?php echo $this->layout()->content ?> 
+            </div>
+            <footer>
+                <small>&COPY; mysite.com</small>
+            </footer>
+        </div>
+
+    </body>
+    
+</html>
+
