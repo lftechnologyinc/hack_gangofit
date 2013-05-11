@@ -1,0 +1,354 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu_Light/Ubuntu-Light.eot?") format("eot"), url("../fonts/Ubuntu_Light/Ubuntu-Light.woff") format("woff"), url("../fonts/Ubuntu_Light/Ubuntu-Light.ttf") format("truetype"), url("../fonts/Ubuntu_Light/Ubuntu-Light.svg#Ubuntu-Light") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Champagne__amp__Limousines";
+    src: url("../fonts/Champagne__amp__Limousines/Champagne_Limousines.eot?") format("eot"), url("../fonts/Champagne__amp__Limousines/Champagne_Limousines.woff") format("woff"), url("../fonts/Champagne__amp__Limousines/Champagne_Limousines.ttf") format("truetype"), url("../fonts/Champagne__amp__Limousines/Champagne_Limousines.svg#Candice") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("../fonts/Roboto_Light/Roboto-Light.eot?") format("eot"), url("../fonts/Roboto_Light/Roboto-Light.woff") format("woff"), url("../fonts/Roboto_Light/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto_Light/Roboto-Light.svg#NeuropolXFree") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, a, p, img, ul, li, footer, header, section, h1, span, a img, aside, form, input, article, h2, h3, h4, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+body {
+    width: 100%;
+    font-family: Champagne__amp__Limousines, Georgia, Times New Roman, Times, serif;
+    background: rgba(153,153,153,1);
+    color: #000;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.35em;
+}
+h1{
+    font-size: 1.2em;
+}
+body a {
+    color: #000;
+}
+body a:hover {
+    color: maroon;
+}
+
+body footer {
+    border-top: dotted 1px #000;
+}
+
+a:hover, header ul a {
+    color: #111;
+}
+a, header ul li a:hover {
+    color: #ff9300;
+}
+a:hover {
+    color: maroon;
+    text-decoration: underline;
+}
+.header {
+    float: left;
+    position: fixed;
+    background:rgba(255,255,255,0.3);
+    z-index: 999;
+    height: 80px;
+    margin: 0px 0 0 0px;
+    width: 100%;
+}
+.header ul {
+    position:relative;
+    top:40px;
+    left:262px;
+    
+}
+.header ul li {
+    font-size: small;
+    display: inline;
+    margin: 0px 10px;
+}
+
+.header-scrolled{
+    box-shadow: 0 1px 0 #D2D2D3, 0 1px 3px rgba(0,0,0,0.2);
+}
+.logo a {
+    float: left;
+    font-family:Champagne__amp__Limousines;
+    margin: -13px 0 0 60px;
+    font-size: 3em;
+}
+
+.logo font{
+    float: left;
+    margin: 45px 0 0px -165px;
+    font-size: medium;
+    position:relative;
+    left:166px;
+    top:-14px;
+}
+.logo1{
+    position:relative;
+    top:-3px;
+    left:155px;
+    width:50px;
+    height:40px;
+    
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+.active{
+    color:#0099cc;
+}
+#main_container
+{
+    position: relative;
+    top: 110px;
+    width:960px;
+    margin: 30px 0 0 150px;
+     
+}
+#main_container h1
+{
+    font-family:Champagne__amp__Limousines;
+    letter-spacing:2;
+    font-weight: 1000;
+    margin-left: 20px;
+}
+/* academic */
+#container table tr td{
+    font-size: small;
+    list-style-type: none;
+    padding: 10px 0 0 50px;
+}
+.academic  h4{
+    font-size: 0.8em;
+    padding: 35px 0 0 35px;
+}
+.academic-left{
+    width: 200px;
+    float: left;
+}
+.academic_ul  li{
+    font-size: small;
+    padding: 10px 0 0 0px;
+    margin-left: 100px;
+}
+.explanation{
+    padding-left: 20px;
+}
+.academic_ul  li a:hover{
+    text-decoration: none;}
+.content-area{
+    margin-top: 30px;
+    
+}
+.content-area p{
+    font-size: small;
+    list-style-type: none;
+    padding:10px 0 0 75px;
+}
+.content-area h1{
+    font-size:1em;
+    padding-top:20px;
+}
+.content-area h2{
+    font-size: 0.7em;
+    padding:20px 0 0 30px;
+}
+#b-computer{
+    display: none;
+}
+#b-elec{
+    display: none;
+}
+#b-civil{
+    display: none;
+}
+#b-arch{
+    display: none;
+}
+#b-aero{
+    display: none;
+}
+/* end of academic*/
+.content{
+
+    padding:0px 50px 0 0;
+    text-align: justify;
+    text-indent: 50px;
+    font-size: small;
+    margin-top:10px;
+}
+
+
+.content h5{
+    position: relative;
+    left:-50px;
+    top:15px;
+}
+
+footer {
+    width: 960px;
+    text-align: center;
+    float: left;
+    margin: 165px 0 0 160px;
+    padding: 30px 0 0 0 ;
+    border-top: dotted 1px #ddd;
+}
+.recent_news_event{
+    margin-top:10px;
+}
+.recent_news_event li{
+    list-style-type: none;
+    font-size: small;
+}
+.recent_news_event h5:hover{
+    color:maroon;
+}
+#contact-info{
+    color: #002957;
+    font-size: small;
+}
+#contact-info p:hover{
+    color:#1b1b1b;
+}
+
+
+.news-body{
+
+}
+.news-body .news-title{
+    height: auto;
+}
+.news-body span{
+    font-size:small;
+}
+.news-body h5{
+    font-size:11pt;
+}
+
+#container{
+    width: 600px;
+    float: left;
+    margin:0px 53px 0 0px;
+}
+#container table tr td{
+    font-size: small;
+    list-style-type: none;
+    padding: 10px 0 0 50px;
+}
+#container table tr td{
+    font-size: small;
+    list-style-type: none;
+    padding: 10px 0 0 50px;
+}
+.academic_ul  h4{
+    font-size: 0.8em;
+    padding: 35px 0 0 35px;
+}
+
+.explanation{
+    padding-left: 20px;
+}
+.academic_ul  li a:hover{text-decoration: none;}
+
+.facilities-info{
+    position:relative;
+    height:150px;
+}
+.facility-image{
+    width:150px;
+    height:100px;
+    margin-left:-50px;
+}
+.p-facilities{
+    position:relative;
+    top:-110px;
+    margin-left:160px;
+}
+.more-info{
+    color: #0088cc;
+    margin-left:10px;
+    font-weight: bold;
+}
+.more-info:hover{
+    color:#002957;
+    text-decoration: none;
+    font-weight: bold;
+}
+.img-about{
+    margin-left:-50px;
+}
+#transport-first-p{
+    width:280px;
+    position:relative;
+    margin-left:300px;
+    margin-top:-7px;
+    top:-180px;
+}
+#transport-second-p{
+    position:relative;
+    top:-165px;
+}
+#transport-thumb{
+    position:relative;
+    top:-150px;
+}
+.landscape img{
+    width:300px;
+    height:200px;
+    
+}
+
+.portrait img,.portrait1 img{
+    width:300px;
+    height:300px;
+}
+.feedback-form{
+    position:relative;
+    left:-40px;
+}
+.btn-feedback{
+    position:relative;
+    left:140px;
+}
+.btn-hide,.btn-hide2,.btn-hide3 {
+    position:relative;
+    left:550px;
+    top:-20px;
+}
+
+
+.img-about{
+    margin-bottom: 10px;
+}
+.btn-news-show{
+    position: relative;
+    top:5px;
+}
+#googleMap
+{
+    margin: 250px 0 0 150px;
+    width:960px;
+    height:500px; 
+    float:left;
+
+}
+
+
+
